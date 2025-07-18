@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  jupyterhub:
+    build: .
+    ports:
+      - "8888:8000"
+    volumes:
+    - ./jupyterhub_config.py:/srv/jupyterhub/jupyterhub_config.py
+    - ./users:/home/jupyterhub
+    - ./jupyterhub_data:/srv/jupyterhub
+    restart: unless-stopped    

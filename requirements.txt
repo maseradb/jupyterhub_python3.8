@@ -1,0 +1,7 @@
+numpy==1.23.3
+py4j==0.10.9.7
+pyarrow==13.0.0
+pyspark==3.5.1
+oracledb==2.0.1
+pandas==1.4.3
+sqlalchemy==2.0.29
