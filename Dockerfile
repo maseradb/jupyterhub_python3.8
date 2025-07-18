@@ -22,6 +22,14 @@ RUN apt-get update && \
     ln -sf /usr/bin/python3.8 /usr/bin/python3 && \
     apt-get install -y python3-pip
 
+# Install Miniconda (Python 3.8)
+RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-py38_23.11.0-2-Linux-x86_64.sh -O /tmp/miniconda.sh \
+    && bash /tmp/miniconda.sh -b -p /opt/miniconda \
+    && rm /tmp/miniconda.sh
+
+ENV CONDA_HOME=/opt/miniconda
+ENV PATH="$CONDA_HOME/bin:$PATH"
+
 ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 ENV PATH="$JAVA_HOME/bin:$PATH"
 
