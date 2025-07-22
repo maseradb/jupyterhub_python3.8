@@ -15,3 +15,4 @@ c.Authenticator.admin_users = {'admin'}
 c.Authenticator.allow_all = True
 c.JupyterHub.spawner_class = 'simple'
 c.Spawner.args = ['--allow-root']
+c.JupyterHub.db_url = 'postgresql+psycopg2://jupyterhub:password1@postgres:5432/jupyterhub'
